@@ -12,22 +12,25 @@ import express from "express";
 import morgan from "morgan";
 import { config } from "dotenv"; // import dotenv from "dotenv";
 
-/** local imports */
+/** local imports  NOTE:: Always  use full name while importing any locals files*/
 import ConnectionDatabase from "./config/db.js";
-import router from "./controllers/user.js";
+import router from "./routes/user.js";
 
 const app = express();
 
+/** this is the body parser */
 app.use(express.json());
 
 /**this is the third-party middleware */
 app.use(morgan("dev"));
 
+/** by this we import router from controllers */
 app.use("/api", router);
 
 /** this is used to require the .env files */
 config(); // dotenv.config();
 
+/** this is the function where we connected to database */
 ConnectionDatabase(process.env.MONGO_URL);
 
 try {
