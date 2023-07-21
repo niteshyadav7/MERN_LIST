@@ -10,6 +10,7 @@
 /** with ES6   */
 import express from "express";
 import morgan from "morgan";
+import cors from "cors";
 import { config } from "dotenv"; // import dotenv from "dotenv";
 
 /** local imports  NOTE:: Always  use full name while importing any locals files*/
@@ -21,6 +22,7 @@ const app = express();
 /** this is the body parser */
 app.use(express.json());
 
+app.use(cors());
 /**this is the third-party middleware */
 app.use(morgan("dev"));
 
