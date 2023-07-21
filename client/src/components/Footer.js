@@ -1,8 +1,10 @@
 const Footer = () => {
   return (
-    <>
-      <div>&reg; CRUD,All Right Reserved.</div>
-    </>
+    <footer className="bg-neutral-200  dark:bg-neutral-700 lg:text-left fixed bottom-0 left-0 w-full text-center">
+      <div className="p-4 text-center text-neutral-700 dark:text-neutral-200">
+        © 2023 Copyright:CRUD OPERATION
+      </div>
+    </footer>
   );
 };
 

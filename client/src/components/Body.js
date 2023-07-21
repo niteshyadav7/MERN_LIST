@@ -5,9 +5,15 @@ import Header from "./Header";
 const Body = () => {
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <div>
+        <Header />
+      </div>
+      <div>
+        <Outlet />
+      </div>
+      <div className="h-full mt-96">
+        <Footer />
+      </div>
     </>
   );
 };

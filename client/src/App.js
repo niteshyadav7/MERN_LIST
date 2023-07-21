@@ -1,3 +1,4 @@
+import "./index.css";
 import { createBrowserRouter } from "react-router-dom";
 import Body from "./components/Body";
 import Error from "./components/Error";
