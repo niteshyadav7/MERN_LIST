@@ -41,10 +41,12 @@ app.get("/*", function (req, res) {
 // console.log(path.join(__dirname, "build"));
 
 /** this is the function where we connected to database */
-ConnectionDatabase(process.env.MONGO_URL);
+ConnectionDatabase(
+  "mongodb+srv://nitesh0709yadav:nitesh0709yadav@cluster0.ctp026m.mongodb.net/?retryWrites=true&w=majority"
+);
 
 try {
-  app.listen(process.env.PORT || 8080, () => {
+  app.listen( 8080, () => {
     console.log(`server runnning ${process.env.HOST_NAME}:${process.env.PORT}`);
   });
 } catch (err) {
