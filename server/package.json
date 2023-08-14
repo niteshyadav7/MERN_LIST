@@ -4,8 +4,7 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "start": "nodemon app.js",
-    "build": "npm i"
+    "start": "nodemon app.js"
   },
   "author": "Nitesh Yadav",
   "license": "ISC",

@@ -32,6 +32,14 @@ app.use("/api", router);
 /** this is used to require the .env files */
 config(); // dotenv.config();
 
+// app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static("../client/build"));
+app.get("/*", function (req, res) {
+  // res.sendFile(path.join(__dirname, "build", "index.html"));
+  res.sendFile("../client/build/index.html");
+});
+// console.log(path.join(__dirname, "build"));
+
 /** this is the function where we connected to database */
 ConnectionDatabase(process.env.MONGO_URL);
 
