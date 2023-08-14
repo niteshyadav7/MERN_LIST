@@ -4,8 +4,11 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "start": "nodemon app.js"
-  },
+    "start": "nodemon index",
+    "build": "npm install && npm run build-server",
+    "build-server": "echo 'Building server...' && npm run compile-server",
+    "compile-server": "echo 'Compiling server...'"
+    },
   "author": "Nitesh Yadav",
   "license": "ISC",
   "dependencies": {
