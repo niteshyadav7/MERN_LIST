@@ -5,10 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node app.js",
-    "test":"nodemon app.js",
-    "build": "npm install && npm run build-server",
-    "build-server": "echo 'Building server...' && npm run compile-server",
-    "compile-server": "echo 'Compiling server...'"
+    "test":"nodemon app.js"
     },
   "author": "Nitesh Yadav",
   "license": "ISC",
